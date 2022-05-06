@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\Users\enric\Documents\Programming\DSP\CPP\AudioArchitecture\AudioArchitecture\main.cpp(15,37): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\enric\Documents\Programming\DSP\CPP\AudioArchitecture\AudioArchitecture\main.cpp(16,45): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\enric\Documents\Programming\DSP\CPP\AudioArchitecture\AudioArchitecture\main.cpp(23,30): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\enric\Documents\Programming\DSP\CPP\AudioArchitecture\AudioArchitecture\main.cpp(25,36): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  AudioArchitecture.vcxproj -> C:\Users\enric\Documents\Programming\DSP\CPP\AudioArchitecture\x64\Debug\AudioArchitecture.exe

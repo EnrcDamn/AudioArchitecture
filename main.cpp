@@ -3,6 +3,8 @@
 #include <SDL.h>
 #include <math.h>
 
+#define FILE_PATH "./audio/piano.wav"
+
 float sampleRate = 48000.0;
 float phase = 0.0;
 float frequency = 440.0;
@@ -16,13 +18,20 @@ float updateSine()
 	return sinf(phase) * audioGain;
 }
 
+float updateSquare()
+{
+	phase += (1.0 / sampleRate) * frequency;
+	if (phase > 1.0) phase -= 1.0;
+	return (phase > 0.5 ? 1.0 : -1.0) * audioGain;
+}
+
 
 void SDLAudioCallback(void* userdata, Uint8* stream, int streamLength)
 {
 	float* buf = (float*) stream;
 	for (int i = 0; i < streamLength / sizeof(float); i++)
 	{
-		float sample = updateSine();
+		float sample = updateSquare();
 
 		buf[i] = sample;
 	}
@@ -39,6 +48,7 @@ int main(int argc, char* argv[])
 	audioSpec.channels = 1;
 	audioSpec.samples = 4096;
 	audioSpec.callback = SDLAudioCallback;
+
 
 	SDL_AudioDeviceID device = SDL_OpenAudioDevice(NULL, 0, &audioSpec, NULL,
 		SDL_AUDIO_ALLOW_ANY_CHANGE);
