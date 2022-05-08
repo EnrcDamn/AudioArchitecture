@@ -24,6 +24,9 @@
     <ClCompile Include="audioobject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="sdlaudiocontext.cpp">
+      <Filter>Source Files\sdl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="iaudiodata.h">

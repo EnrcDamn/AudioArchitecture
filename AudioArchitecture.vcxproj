@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="audioobject.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="sdlaudiocontext.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audioobject.h" />
