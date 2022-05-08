@@ -6,16 +6,17 @@
 class AudioObject
 {
 public:
+	// Constructor
 	AudioObject(const SampleInfo& info, IAudioData* data);
 
-	bool GenerateSamples(float* stream, size_t streamLength);
-	void SetPos(double pos);
+	bool generateSamples(float* stream, size_t streamLength);
+	void setPos(double pos); // 0 -> 1
 
 private:
-	size_t		m_audioPos;
-	size_t		m_audioLength;
-	SampleInfo  m_sampleInfo;
-	IAudioData* m_audioData;
+	size_t		audioPos;
+	size_t		audioLength;
+	SampleInfo  sampleInfo;
+	IAudioData* audioData;
 
-	size_t PosToAbsolutePos(double pos);
+	size_t posToAbsolutePos(double pos); // pos conversion to normilized
 };

@@ -13,9 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\sdl">
+      <UniqueIdentifier>{a1915129-6d27-44a3-b4f6-c0de488e8678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audioobject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -34,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="sampleinfo.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdlaudiocontext.h">
+      <Filter>Source Files\sdl</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
